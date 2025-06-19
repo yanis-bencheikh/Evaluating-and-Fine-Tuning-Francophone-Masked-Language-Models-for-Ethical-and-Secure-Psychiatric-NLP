@@ -1,0 +1,2 @@
+# Evaluating-and-Fine-Tuning-Francophone-Masked-Language-Models-for-Ethical-and-Secure-Psychiatric-NLP
+Evaluating and reducing bias in French language models for psychiatric support through fine-tuning 4 models (CamemBERT, FlauBERT, XLM-RoBERTa, BioBERT) on therapeutic data. Uses binary MLM to measure favorable vs unfavorable responses. CamemBERT achieved 78.5% favorable rate. Aims to ensure safe AI for mental health.
