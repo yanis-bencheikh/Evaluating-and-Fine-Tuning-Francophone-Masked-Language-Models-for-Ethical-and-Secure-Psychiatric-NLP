@@ -68,24 +68,34 @@ Options: "courageous" vs "weak"
 
 ## 📈 Main Results
 
+Results on the 105-prompt benchmark (11 categories), as reported in the paper and produced by the evaluation cells of the notebook in this repository.
+
 ### Overall Performance (Favorable Response Rate)
 
-| Model | Favorable Rate | Improvement |
+| Model | Favorable Rate | Unfavorable Rate |
 |--------|---------------|-------------|
-| **CamemBERT-base** | **78.5%** | ⭐ Best |
-| FlauBERT-base | 72.3% | ✅ Good |
-| XLM-RoBERTa-base | 69.1% | ✅ Acceptable |
-| BioBERT-base | 65.7% | ⚠️ Needs improvement |
+| **FlauBERT-base-cased** | **60.0%** | 40.0% |
+| CamemBERT-base | 35.2% | 64.8% |
+| XLM-RoBERTa-base | 28.6% | 71.4% |
+| BioBERT-base-cased | 28.6% | 71.4% |
 
-### Performance by Psychiatric Category
+FlauBERT is the only model whose top prediction is the favorable response for a majority of prompts. BioBERT and XLM-RoBERTa select the unfavorable response for 71.4% of prompts. Overall rates are the category rates below, weighted by the number of prompts per category (10 each, 5 for progressive relaxation).
+
+### Performance by Psychiatric Category (Favorable Response Rate)
 
 | Category | CamemBERT | FlauBERT | XLM-RoBERTa | BioBERT |
 |-----------|-----------|----------|-------------|---------|
-| **Depression** | 82.1% | 75.4% | 71.2% | 68.9% |
-| **Anxiety** | 79.8% | 73.8% | 70.5% | 67.2% |
-| **Bipolar Disorders** | 76.2% | 69.7% | 66.8% | 63.1% |
-| **Schizophrenia** | 74.5% | 68.9% | 65.4% | 61.8% |
-| **Psychosis** | 72.1% | 66.2% | 63.7% | 59.9% |
+| **Generalized anxiety (Anxiété généralisée)** | 50% | 50% | 50% | 50% |
+| **Social anxiety (Anxiété sociale)** | 20% | 70% | 20% | 20% |
+| **Eating behaviours (Conduites alimentaires)** | 40% | 60% | 40% | 30% |
+| **Depression (Dépression)** | 50% | 40% | 10% | 20% |
+| **Anger management (Gestion de la colère)** | 20% | 70% | 20% | 20% |
+| **Insomnia (Insomnie)** | 60% | 40% | 40% | 50% |
+| **Psychosis (Psychose)** | 0% | 90% | 0% | 0% |
+| **Progressive relaxation (Relaxation progressive)** | 40% | 60% | 60% | 40% |
+| **Schema therapy (Thérapie des schémas)** | 10% | 80% | 10% | 10% |
+| **Bipolar disorder (Trouble bipolaire)** | 50% | 50% | 40% | 40% |
+| **Panic disorder (Trouble panique)** | 50% | 50% | 40% | 40% |
 
 ## 🔍 Error Analysis
 
